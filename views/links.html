@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" id="pjax-container">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="GJyao">
+	<meta name="description" content="个人博客，技术笔记，生活随笔">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+	<meta property="og:site_name" content="姚慧敏的博客">
+	<meta name="keywords" content="<%=config.keywords%>">
+	<title>友情链接 - <%=config.site_name%></title>
+	<link rel="stylesheet" href="/styles/basic.css">
+	<link rel="stylesheet" href="/styles/blog.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/pace-theme-minimal.css">
+	<link href="/favicon.ico" rel="icon">
+	<script src="/scripts/pace.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="wrapper">
+		<section class="navbar">
+			<nav class="info">
+				<a href="/">
+					<section class="me">
+						<img src="/images/me.jpg" alt="GJyao">
+					</section>
+				</a>
+				<section class="nav">
+					<ul>
+						<li>
+							<a href="/blog" class="btn">
+							<i class="fa fa-home"></i>Blog<i class="after"></i>
+							</a>
+						</li>
+						<span>&nbsp·&nbsp</span>
+						<li>
+							<a href="/links"><i class="fa fa-heartbeat"></i>Links <i class="after"></i>
+							</a>
+						</li>
+						<span>&nbsp·&nbsp</span>
+
+						<li>
+							<a href="http://www.github.com/gjyao" class="btn"><i class="fa fa-github"></i>Github <i class="after"></i>
+							</a>
+						</li>
+		                <span>&nbsp·&nbsp</span>
+						<li>
+							<a href="http://weibo.com/gjyao">
+								<i class="fa fa-weibo"></i>Weibo <i class="after"></i>
+							</a>
+						</li>
+					</ul>
+
+				</section>
+			</nav>
+		</section>
+		<section class="links">
+			<ul>
+				<%links.forEach(function(link) {%>
+				<a href="http://<%=link.url%>" target="_blank">
+					<li><%=link.name%>
+						<div class="sub"><%=link.url%></div>
+					</li>
+				</a>
+				<% }); %>
+			</ul>
+		</section>
+		<footer>
+			© 2017 GJ yao All rights reserved | myBlog<br>
+			Based on Node.js, <a href="https://github.com/gjyao">Repos on Github</a>			
+		</footer>
+	</div>
+</div>
+<script src="/scripts/jquery-2.1.3.min.js"></script>
+<div style="display: none">
+	<script type="text/javascipt">
+		<!-- protocal -->
+	</script>
+</div>
+</body>
+</html>
