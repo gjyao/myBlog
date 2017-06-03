@@ -1,6 +1,6 @@
 module.exports = {
 	site_name: "GJyao's Blog",
-	keywords: "前端开发,node",
+	keywords: "前端开发,node,mongodb",
 	db: "mongodb://127.0.0.1:27017/myblog",
 	admin: {
 		username: 'admin',
